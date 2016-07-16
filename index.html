@@ -17,7 +17,7 @@
         socket = new WebSocket(url);
         user = document.getElementById("name").value;
         socket.onmessage = function (msg) {
-          var chatBox = document.getElementById("chatBox").setAttribute("style","background-color: #66ff33");
+          var chatBox = document.getElementById("chatBox");
           var message = JSON.parse(msg.data);
           chatBox.innerHTML = "<b>" + message.user + "</b>:" + message.text + "<br>" + chatBox.innerHTML;
         };
